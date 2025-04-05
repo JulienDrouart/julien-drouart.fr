@@ -2,7 +2,13 @@
     <div class="container">
         <h1 class="display-4">Bienvenue sur mon site</h1>
         <p class="lead">Vous trouverez ici des informations me concernant, comme mes formations, mes expériences, mes compétences, les projets sur lesquels j'ai été amené à travailler, etc.</p>
-        <p class="lead">Je travaille dans le domaine du développement et plus particulièrement PHP et le framework Symfony depuis maintenant plus de 6 ans. </p>
+        <p class="lead">Je travaille dans le domaine du développement et plus particulièrement PHP et le framework Symfony depuis maintenant plus de <span id="experience-years"></span> ans. </p>
+        <script>
+            const startYear = 2018;
+            const currentYear = new Date().getFullYear();
+            const yearsOfExperience = currentYear - startYear;
+            document.getElementById('experience-years').textContent = yearsOfExperience;
+        </script>
         <hr class="my-4">
         <p>Vous avez également la possibilité de consulter mon CV directement</p>
         <a class="btn btn-success btn-lg" href="/assets/CV.pdf?version=1.10" target="_blank" role="button">Télécharger le CV</a>
